@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        h1{
+            font-size: xx-large;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            background-color: black;
+            color: aqua;
+            padding-block: 20px;
+        }
+        .inputnumbers{
+            display: flex;
+            justify-content: center;
+        }
+        .inputnumbers input{
+            height: 50px;
+            width: 500px;
+            text-align: center;
+        }
+        .buttons button {
+            background-color: black;
+            color: azure;
+            padding-block: 10px;
+            padding-inline: 30px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        .buttons{
+            text-align: center;
+        }
+        .buttons button:hover{
+            background-color: azure;
+            color: brown;
+        }
+        p{
+            font-size: 50px;
+            text-align:center ;
+            color: blue;
+        }  
+    </style>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <div class="cal">
+        <div class="inputnumbers">
+            <input id="num1" type="number" placeholder="Enter the first number">
+            <input id="num2" type="number" placeholder="Enter the second number"> 
+        </div>
+        <div class="buttons">
+            <button onclick="add()">Add</button>
+            <button onclick="sub()">Sub</button>
+            <button onclick="mult()">Mult</button>
+            <button onclick="div()">Div</button>
+        </div>
+    </div>
+    <p id="result">Result</p>
+    
+
+
+    <script>
+        var box1 = document.getElementById("num1");
+        var box2 = document.getElementById("num2");
+        var result = document.getElementById("result"); 
+    
+        function add() {
+            var box1value = Number(box1.value);
+            var box2value = Number(box2.value);
+    
+            var total = box1value + box2value;
+            result.textContent = "Total = " + total; 
+        }
+        function sub() {
+            var box1value = Number(box1.value);
+            var box2value = Number(box2.value);
+    
+            var total = box1value - box2value;
+            result.textContent = "Total = " + total; 
+        }
+        function mult() {
+            var box1value = Number(box1.value);
+            var box2value = Number(box2.value);
+    
+            var total = box1value * box2value;
+            result.textContent = "Total = " + total; 
+        }
+        function div() {
+            var box1value = Number(box1.value);
+            var box2value = Number(box2.value);
+    
+            var total = box1value / box2value;
+            result.textContent = "Total = " + total; 
+        }
+
+
+    </script>
+</body>
+</html>
+
